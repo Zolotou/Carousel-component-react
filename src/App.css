@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+.text {
+    text-align: center;
+    color: blue;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.5;
+    width: 10%;
+    height: 20%;
+}
+
+.button-left {
+    left: 0
+}
+
+.button-right {
+    right: 0;
+}
+
+
+.Slider {
+    display: flex;
+    height:  30%;
+    border: 1px solid black;
+    overflow: hidden;
+
+}
+
+.slide {
+    color:  red;
+    min-width: 100%;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
