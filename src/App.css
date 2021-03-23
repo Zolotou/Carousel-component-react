@@ -1,4 +1,5 @@
 * {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -39,9 +40,7 @@
 .Slider {
     display: flex;
     height:  90%;
-    border: 1px solid black;
     overflow: hidden;
-
 }
 
 .slide {
@@ -50,8 +49,7 @@
     justify-content: center;
     color:  yellow;
     min-width: 100%;
-    border: 1px solid red;
-    transition: 0.5s;
+    transition: 0.6s;
 }
 
 .slide-content {
@@ -62,4 +60,27 @@
     align-items: center;
     justify-content: center;
     background-color: grey;
+}
+
+.Slider-pointer-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    margin: 0 10%;
+}
+
+.pointer {
+    padding: 10px; 
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 25%;
+    background-color: thistle;
+}
+
+.pointer-active {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 25%;
+    background-color: wheat;
 }
