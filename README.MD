@@ -1,6 +1,6 @@
 # CAROUSEL COMPONENT
 
-Deploy: https://carousel-component-live.netlify.app/
+Deploy: https://carousel-component-zolotou.netlify.app/
 
 ## Features:
 
