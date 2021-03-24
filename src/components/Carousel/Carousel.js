@@ -34,7 +34,7 @@ const Carousel = ({slidesCount, infiniteOption}) => {
         const touchDistance =  Math.abs(touchStart -  e.changedTouches[0].clientX);
         const movePercent = touchDistance * 100 / window.innerWidth;
         if(movePercent < 30){
-            console.log({movePercent, xAxisStep});
+
             SetXAxisStep(prev => touchStart <= TouchMove ? -slidePlace*100+movePercent : -slidePlace*100-movePercent);
         }
         
@@ -48,7 +48,7 @@ const Carousel = ({slidesCount, infiniteOption}) => {
     const goLeft = () => { 
         if(infiniteOption){
             SetXAxisStep(prev => prev >= FIRST_SLIDE_POSITION ? LAST_SLIDE : Math.round((prev + PERCENT_OF_WIDTH_FOR_NEXT_SWIPE)/100)*100);
-            SetSlidePlace(slidePlace == 0 ? slides.length-1 : slidePlace - 1);
+            SetSlidePlace(slidePlace == FIRST_SLIDE_POSITION ? LAST_SLIDE_POSITION : slidePlace - 1);
         }else{
             SetXAxisStep(prev => prev >= FIRST_SLIDE_POSITION ? FIRST_SLIDE_POSITION: Math.round((prev + PERCENT_OF_WIDTH_FOR_NEXT_SWIPE)/100)*100);  
             SetSlidePlace(slidePlace === FIRST_SLIDE_POSITION ? FIRST_SLIDE_POSITION: slidePlace - 1);    
@@ -58,10 +58,10 @@ const Carousel = ({slidesCount, infiniteOption}) => {
     const goRight = () => { 
         if(infiniteOption){
             SetXAxisStep(prev => prev <= LAST_SLIDE ? FIRST_SLIDE_POSITION : Math.round((prev - PERCENT_OF_WIDTH_FOR_NEXT_SWIPE)/100)*100);
-            SetSlidePlace(slidePlace == slides.length-1 ? FIRST_SLIDE_POSITION : slidePlace + 1);
+            SetSlidePlace(slidePlace == LAST_SLIDE_POSITION ? FIRST_SLIDE_POSITION : slidePlace + 1);
         }else {
             SetXAxisStep(prev => prev <= LAST_SLIDE ? LAST_SLIDE : Math.round((prev - PERCENT_OF_WIDTH_FOR_NEXT_SWIPE)/100)*100);
-            SetSlidePlace(slidePlace === LAST_SLIDE_POSITION ? LAST_SLIDE_POSITION : slidePlace++);
+            SetSlidePlace(slidePlace === LAST_SLIDE_POSITION ? LAST_SLIDE_POSITION : slidePlace + 1);
         }
         
         

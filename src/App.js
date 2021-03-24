@@ -15,7 +15,7 @@ const App = () => {
                 <li>Supports scrolling to a selected slide</li>
                 <li>NO npx | NO runtime libraries</li>
             </ul>
-            <Carousel facts slidesCount={NUMBER_OF_SLIDES} infiniteOption={true} />
+            <Carousel slidesCount={NUMBER_OF_SLIDES} infiniteOption={true} />
             
         </div>
 
